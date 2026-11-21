@@ -2,15 +2,25 @@
   <div class="print-root">
     <!-- Controls (hidden on actual print) -->
     <div class="print-controls no-print">
-      <div class="print-controls__switch">
-        <button
-          :class="{ active: cvType === 'architect' }"
-          @click="cvType = 'architect'"
-        >Architect CV</button>
-        <button
-          :class="{ active: cvType === 'developer' }"
-          @click="cvType = 'developer'"
-        >Developer CV</button>
+      <div class="print-controls__switches">
+        <div class="print-controls__switch">
+          <button
+            :class="{ active: cvType === 'architect' }"
+            @click="cvType = 'architect'"
+          >Architect CV</button>
+          <button
+            :class="{ active: cvType === 'developer' }"
+            @click="cvType = 'developer'"
+          >Developer CV</button>
+        </div>
+        <div class="print-controls__switch">
+          <button
+            v-for="locale in LOCALES"
+            :key="locale.code"
+            :class="{ active: lang === locale.code }"
+            @click="lang = locale.code"
+          >{{ locale.flag }} {{ locale.label }}</button>
+        </div>
       </div>
       <div class="print-controls__actions">
         <button class="print-controls__back" @click="mode = 'web'">← Web view</button>
@@ -43,7 +53,8 @@
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue'
 import { marked } from '@/composables/useMarked'
-import { mode, cvType } from '@/composables/useCVMode'
+import { mode, cvType, lang } from '@/composables/useCVMode'
+import { LOCALES } from '@/config/locales'
 
 const contentModules = import.meta.glob('@/content/**/*.md', {
   query: '?raw',
@@ -55,7 +66,7 @@ const contents = ref<Record<string, string>>({})
 
 async function loadAll() {
   for (const file of files) {
-    const key = `/src/content/${cvType.value}/${file}.md`
+    const key = `/src/content/${lang.value}/${cvType.value}/${file}.md`
     const loader = contentModules[key]
     if (loader) {
       contents.value[file] = (await loader()) as string
@@ -63,7 +74,7 @@ async function loadAll() {
   }
 }
 
-watch(cvType, loadAll, { immediate: true })
+watch([cvType, lang], loadAll, { immediate: true })
 
 const title = computed(() =>
   cvType.value === 'architect' ? 'Software Architect' : 'Senior Backend Developer'
@@ -103,6 +114,11 @@ declare const window: Window
   background: white;
   border-bottom: 1px solid var(--print-border);
   gap: 12px;
+}
+
+.print-controls__switches {
+  display: flex;
+  gap: 8px;
 }
 
 .print-controls__switch {

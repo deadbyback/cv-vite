@@ -2,7 +2,13 @@
   <div class="statusbar">
     <span class="statusbar__left">Oleksandr Vanin — {{ label }}</span>
     <div class="statusbar__right">
-      <span>🇺🇦 Ukrainian</span>
+      <button
+        v-for="locale in LOCALES"
+        :key="locale.code"
+        class="lang-btn"
+        :class="{ active: lang === locale.code }"
+        @click="lang = locale.code"
+      >{{ locale.flag }} {{ locale.code.toUpperCase() }}</button>
       <span>6+ yrs exp</span>
       <span>team: 10</span>
       <span>Markdown</span>
@@ -13,7 +19,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { cvType } from '@/composables/useCVMode'
+import { cvType, lang } from '@/composables/useCVMode'
+import { LOCALES } from '@/config/locales'
 
 const label = computed(() =>
   cvType.value === 'architect' ? 'Software Architect' : 'Senior Backend Developer'
@@ -41,5 +48,26 @@ const label = computed(() =>
 .statusbar__right {
   display: flex;
   gap: 16px;
+  align-items: center;
+}
+
+.lang-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.lang-btn.active {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.lang-btn:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.85);
 }
 </style>

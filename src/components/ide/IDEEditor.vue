@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { computed, watch, ref } from 'vue'
 import { marked } from '@/composables/useMarked'
-import { cvType, activeFile, viewPanel } from '@/composables/useCVMode'
+import { cvType, lang, activeFile, viewPanel } from '@/composables/useCVMode'
 
 // Dynamic import of all markdown files
 const contentModules = import.meta.glob('@/content/**/*.md', {
@@ -28,16 +28,16 @@ const contentModules = import.meta.glob('@/content/**/*.md', {
 const rawContent = ref('')
 
 async function loadContent() {
-  const key = `/src/content/${cvType.value}/${activeFile.value}.md`
+  const key = `/src/content/${lang.value}/${cvType.value}/${activeFile.value}.md`
   const loader = contentModules[key]
   if (loader) {
     rawContent.value = (await loader()) as string
   } else {
-    rawContent.value = `# Not found\n\nFile \`${key}\` not found.`
+    rawContent.value = '# Not found\n\nThis file could not be loaded.'
   }
 }
 
-watch([cvType, activeFile], loadContent, { immediate: true })
+watch([cvType, lang, activeFile], loadContent, { immediate: true })
 
 const renderedMarkdown = computed(() => marked.parse(rawContent.value) as string)
 

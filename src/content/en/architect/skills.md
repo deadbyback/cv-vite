@@ -37,7 +37,6 @@
 - **Self-hosted LLM deployment**: deployed Qwen 3.5 locally on a server for internal feature testing — evaluated model capabilities, inference performance, and integration feasibility
 - **MCP development**: building a Model Context Protocol server for GitLab integration (in progress) — enabling AI agents to interact with repository data, MRs, and CI pipelines
 - **AI-assisted development**: Claude Code as primary engineering tool; daily workflow integration
-- *This CV is itself a Vue 3 + Vite + TypeScript project built with Claude Code — portfolio piece*
 
 ## Languages
 - Ukrainian — Native
