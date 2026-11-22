@@ -1,6 +1,6 @@
 # Олександр Ванін
 
-**Senior Backend Developer** · QuartSoft · Україна
+**Senior Backend Developer** , QuartSoft , Україна
 
 ---
 

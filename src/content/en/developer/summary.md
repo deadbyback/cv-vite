@@ -1,6 +1,6 @@
 # Oleksandr Vanin
 
-**Senior Backend Developer** · QuartSoft · Ukraine
+**Senior Backend Developer** , QuartSoft , Ukraine
 
 ---
 
