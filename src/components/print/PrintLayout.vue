@@ -24,7 +24,7 @@
       </div>
       <div class="print-controls__actions">
         <button class="print-controls__back" @click="mode = 'web'">← Web view</button>
-        <button class="print-controls__print" @click="window.print()">Print / Save PDF</button>
+        <button class="print-controls__print" @click="printPage">Print / Save PDF</button>
       </div>
     </div>
 
@@ -95,7 +95,7 @@ const fullContent = computed(() => {
   return marked.parse(sections) as string
 })
 
-declare const window: Window
+function printPage() { window.print() }
 </script>
 
 <style scoped>
