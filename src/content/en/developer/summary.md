@@ -15,4 +15,4 @@ Integrates AI tooling into daily development workflow (Claude Code); deployed a 
 - [av.chezz@gmail.com](mailto:av.chezz@gmail.com)
 - [github.com/deadbyback](https://github.com/deadbyback)
 - [linkedin.com/in/oleksandr-vanin-2a3b56224](https://linkedin.com/in/oleksandr-vanin-2a3b56224)
-- Kyiv, Ukraine (Remote-ready)
+- Ukraine | Remote | UTC+2

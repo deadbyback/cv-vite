@@ -40,7 +40,7 @@
           <span class="dot">·</span>
           <span>linkedin.com/in/oleksandr-vanin-2a3b56224</span>
           <span class="dot">·</span>
-          <span>Kyiv, Ukraine (Remote-ready)</span>
+          <span>Ukraine | Remote | UTC+2</span>
         </div>
       </header>
 

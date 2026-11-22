@@ -3,11 +3,11 @@
 ---
 
 ## Backend
-- **PHP 8.3** — 6+ years · Primary language · Yii2 (deep expertise), Laravel (proficient)
-- **Go** — 1 year · Production service migration, concurrent workloads
-- **.NET / C#** — 1+ year · Data parsing services, background processing
-- **Python** — 2+ years · Geospatial scripting, GDAL/OGR automation
-- **Node.js** — 2+ years · REST APIs, integrations, tooling scripts
+- **PHP 8.3** - 6+ years | Primary language | Yii2 (deep expertise), Laravel (proficient)
+- **Go** - 1 year | Production service migration, concurrent workloads
+- **.NET / C#** - 1+ year | Data parsing services, background processing
+- **Python** - 2+ years | Geospatial scripting, GDAL/OGR automation
+- **Node.js** - 2+ years | REST APIs, integrations, tooling scripts
 
 ## Databases
 - **PostgreSQL** — 6+ years · Schema design, partitioning, replication, query optimization

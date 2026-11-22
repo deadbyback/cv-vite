@@ -15,4 +15,4 @@ Backend-розробник із 6+ роками досвіду побудови 
 - [av.chezz@gmail.com](mailto:av.chezz@gmail.com)
 - [github.com/deadbyback](https://github.com/deadbyback)
 - [linkedin.com/in/oleksandr-vanin-2a3b56224](https://linkedin.com/in/oleksandr-vanin-2a3b56224)
-- Київ, Україна (Remote-ready)
+- Україна | Remote | UTC+2

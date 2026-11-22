@@ -17,4 +17,4 @@ Currently exploring AI integration: deployed self-hosted Qwen 3.5 for internal f
 - [av.chezz@gmail.com](mailto:av.chezz@gmail.com)
 - [github.com/deadbyback](https://github.com/deadbyback)
 - [linkedin.com/in/oleksandr-vanin-2a3b56224](https://linkedin.com/in/oleksandr-vanin-2a3b56224)
-- Kyiv, Ukraine (Remote-ready)
+- Ukraine | Remote | UTC+2

@@ -10,11 +10,11 @@
 - **REST API Design** — resource modeling, versioning, documentation (OpenAPI)
 
 ## Backend
-- **PHP 8.3** — 6+ years · Primary language · Yii2 framework
-- **Go** — 1 year · Service migration, performance-critical components
-- **.NET / C#** — 1+ year · Parser services, data processing
-- **Python** — 2+ years · Geospatial scripting, GDAL/OGR pipelines
-- **Node.js** — 2+ years · API integrations, tooling
+- **PHP 8.3** - 6+ years | Primary language | Yii2 framework
+- **Go** - 1 year | Service migration, performance-critical components
+- **.NET / C#** - 1+ year | Parser services, data processing
+- **Python** - 2+ years | Geospatial scripting, GDAL/OGR pipelines
+- **Node.js** - 2+ years | API integrations, tooling
 
 ## Data & Geospatial
 - **PostgreSQL / PostGIS** — 6+ years · Partitioning, replication, complex geospatial queries
@@ -27,7 +27,7 @@
 - Docker, Docker Compose
 - AWS (RDS), Hetzner (self-hosted)
 - GitLab CI/CD (in progress for monolith deployment)
-- OpenObserve · Sentry · New Relic
+- OpenObserve, Sentry, New Relic
 
 ## Frontend (Secondary)
 - Vue.js 2/3 — 3+ years (Vue 2 in production; Vue 3 in personal projects)

@@ -2,11 +2,11 @@
 
 ---
 
-## Master of Science — Computer Science
-**Donbas State Engineering Academy** · 2019 – 2021
+## Master of Science - Computer Science
+**Donbas State Engineering Academy** | 2019 - 2021
 
-## Bachelor of Science — Information Technology in Technology and Business
-**Donbas State Engineering Academy** · 2015 – 2019
+## Bachelor of Science - Information Technology in Technology and Business
+**Donbas State Engineering Academy** | 2015 - 2019
 
 ---
 
