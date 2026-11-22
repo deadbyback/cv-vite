@@ -84,7 +84,7 @@ const title = computed(() =>
 const profileText = computed(() => {
   const raw = contents.value['summary'] ?? ''
   const afterDivider = raw.split('---')[1] ?? ''
-  const beforeContact = afterDivider.split('## Contact')[0] ?? afterDivider
+  const beforeContact = afterDivider.split(/\n##\s/)[0] ?? afterDivider
   return marked.parse(beforeContact.trim()) as string
 })
 
