@@ -5,18 +5,18 @@
 ## Software Architect
 **QuartSoft** | March 2025 - Present | ~1y 9m
 
-Responsible for technical direction of a geospatial agricultural SaaS platform. Collaborate ~60% of the time with Business Analysts translating business requirements into technical specs, API contracts, and module boundaries.
+Own technical direction of a geospatial agricultural SaaS platform. Spend ~60% of time embedded with Business Analysts - translating domain requirements into technical specs, API contracts, and module boundaries.
 
-- Designed modular backend architecture (Clean Architecture + DDD) - reduced inter-module coupling, enabling 2 teams to work in parallel without conflicts
-- Authored engineering standards (coding style, dev workflow, test coverage requirements, MR templates): reduced production bug count and increased overall delivery velocity - higher per-feature investment in quality, but significantly fewer bug-driven context switches
-- Regularly reinterpreted business requirements in BA sessions - proposed technically simpler, cheaper alternatives that delivered the same business value at a fraction of the estimated complexity
-- Led PHP upgrade 7.4 to 8.3 with zero downtime on a live monolith (400+ DB tables, 500k+ lines of code)
-- Migrated critical Laravel service to Go - background snapshot processing: ~3 min avg to max 30s (all retries), **6x improvement**; lowered infra cost
-- Coordinated technical integration between 3 related projects sharing data models and APIs
-- Established GitLab MR-based code review; mentored 2 junior developers during onboarding
-- Set up observability stack from scratch: OpenObserve (logs), Sentry + New Relic (errors + APM)
-- CI/CD in progress: automated container builds in GitLab CI for a complex legacy monolith
-- Initiated AI tooling experiments: deployed self-hosted Qwen 3.5 for internal feature evaluation; currently building a GitLab MCP server to integrate AI agents with repository workflows
+- Designed modular backend architecture (Clean Architecture + DDD) - 2 feature teams now ship in parallel without merge conflicts
+- Established engineering standards (code style, MR templates, test coverage gates) - reduced production bug rate and eliminated most reactive firefighting cycles
+- Consistently reframed scope in BA sessions - delivered same business outcomes at lower technical complexity, freeing engineering capacity
+- Upgraded PHP 7.4 to 8.3 with zero downtime on a 500k-LOC live monolith (400+ DB tables)
+- Rewrote critical Laravel service in Go - cut background processing from ~3 min to 30s (6x); reduced infrastructure cost
+- Defined cross-project API contracts across 3 integrated products sharing data models - eliminated integration regressions
+- Built code review culture via GitLab MRs; mentored 2 junior devs from onboarding to independent delivery
+- Built observability from scratch (OpenObserve, Sentry, New Relic) - gave the team first real visibility into production health
+- Incrementally shipping CI/CD for a 500k-LOC legacy monolith without disrupting daily releases
+- Drove AI tooling adoption: deployed self-hosted Qwen 3.5 for internal evaluation; building GitLab MCP server to connect AI agents to repository workflows
 
 **Led team of 10**: 2 Backend, 2 Frontend, 2 Mobile, 2 QA, 1 PM
 
@@ -27,16 +27,16 @@ Responsible for technical direction of a geospatial agricultural SaaS platform. 
 ## Software Developer (Backend)
 **QuartSoft** | March 2019 - February 2025 | 6y
 
-Core backend developer for the same platform, growing it from early-stage to 5k+ daily active mobile users.
+Core backend developer growing the platform from early-stage to 5k+ daily active mobile users.
 
-- Built and maintained REST API serving Web (500+ DAU) and Mobile (5k+ DAU) clients - 100+ endpoints
-- **+30% GPS processing throughput**: optimized geospatial pipeline with PostGIS spatial indexing and batch processing
-- **+40% API data transfer efficiency**: introduced response compression, pagination, and selective field loading
-- Implemented PostgreSQL table partitioning + streaming replication on a ~400-500 GB PostGIS database (geo data dominant)
-- Built geospatial data pipelines: GDAL/OGR format conversion, GeoServer WMS/WFS tile serving, QGIS-based validation
+- Designed and maintained REST API serving 500+ web and 5k+ daily mobile users - 100+ endpoints, stable under 6 years of continuous delivery
+- **+30% GPS processing throughput**: redesigned geospatial pipeline with PostGIS spatial indexing and batch processing
+- **+40% API data transfer efficiency**: added response compression, pagination, and selective field loading
+- Scaled PostgreSQL to 400-500 GB via table partitioning and streaming replication
+- Built geospatial data pipelines: GDAL/OGR format conversion (Shapefile, GeoJSON, KML, GeoTIFF), GeoServer WMS/WFS
 - Developed binary/XML parsers for agricultural machinery telemetry (ISO-XML, proprietary protocols)
-- Led database performance optimization under growing load: query tuning, index design, connection pooling
-- Implemented custom notification system: push (Firebase FCM), email (SMTP + queue), in-app
-- Migrated file storage from local disk to SeaweedFS (S3-compatible distributed storage)
+- Profiled and tuned database under sustained load growth: EXPLAIN ANALYZE, index redesign, connection pooling
+- Built multi-channel notification system (Firebase FCM, SMTP queue, in-app) for 5k+ mobile users
+- Migrated file storage to SeaweedFS (S3-compatible) - removed single-node bottleneck as data volumes scaled
 
 **Tech**: PHP, Python, .NET, Node.js, PostgreSQL/PostGIS, Redis, Docker, GDAL/OGR, GeoServer, QGIS
